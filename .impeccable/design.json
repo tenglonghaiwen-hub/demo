@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T07:37:07.778Z",
+  "title": "Design System: demo",
+  "extensions": {
+    "colorMeta": {
+      "surface": {
+        "role": "neutral",
+        "displayName": "surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "surface-secondary": {
+        "role": "neutral",
+        "displayName": "surface-secondary",
+        "tonalRamp": [
+          "oklch(15.00% 0.00287 264.54)",
+          "oklch(26.43% 0.00287 264.54)",
+          "oklch(37.86% 0.00287 264.54)",
+          "oklch(49.29% 0.00287 264.54)",
+          "oklch(60.71% 0.00287 264.54)",
+          "oklch(72.14% 0.00287 264.54)",
+          "oklch(83.57% 0.00287 264.54)",
+          "oklch(95.00% 0.00287 264.54)"
+        ]
+      },
+      "surface-glass": {
+        "role": "neutral",
+        "displayName": "surface-glass",
+        "tonalRamp": [
+          "oklch(15.00% 0.00455 258.32)",
+          "oklch(26.43% 0.00455 258.32)",
+          "oklch(37.86% 0.00455 258.32)",
+          "oklch(49.29% 0.00455 258.32)",
+          "oklch(60.71% 0.00455 258.32)",
+          "oklch(72.14% 0.00455 258.32)",
+          "oklch(83.57% 0.00455 258.32)",
+          "oklch(95.00% 0.00455 258.32)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01764 266.32)",
+          "oklch(26.43% 0.01764 266.32)",
+          "oklch(37.86% 0.01764 266.32)",
+          "oklch(49.29% 0.01764 266.32)",
+          "oklch(60.71% 0.01764 266.32)",
+          "oklch(72.14% 0.01764 266.32)",
+          "oklch(83.57% 0.01764 266.32)",
+          "oklch(95.00% 0.01764 266.32)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "text-muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.02034 264.38)",
+          "oklch(26.43% 0.02034 264.38)",
+          "oklch(37.86% 0.02034 264.38)",
+          "oklch(49.29% 0.02034 264.38)",
+          "oklch(60.71% 0.02034 264.38)",
+          "oklch(72.14% 0.02034 264.38)",
+          "oklch(83.57% 0.02034 264.38)",
+          "oklch(95.00% 0.02034 264.38)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "border",
+        "tonalRamp": [
+          "oklch(15.00% 0.00925 258.34)",
+          "oklch(26.43% 0.00925 258.34)",
+          "oklch(37.86% 0.00925 258.34)",
+          "oklch(49.29% 0.00925 258.34)",
+          "oklch(60.71% 0.00925 258.34)",
+          "oklch(72.14% 0.00925 258.34)",
+          "oklch(83.57% 0.00925 258.34)",
+          "oklch(95.00% 0.00925 258.34)"
+        ]
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.00871 264.52)",
+          "oklch(26.43% 0.00871 264.52)",
+          "oklch(37.86% 0.00871 264.52)",
+          "oklch(49.29% 0.00871 264.52)",
+          "oklch(60.71% 0.00871 264.52)",
+          "oklch(72.14% 0.00871 264.52)",
+          "oklch(83.57% 0.00871 264.52)",
+          "oklch(95.00% 0.00871 264.52)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.16655 258.62)",
+          "oklch(26.43% 0.16655 258.62)",
+          "oklch(37.86% 0.16655 258.62)",
+          "oklch(49.29% 0.16655 258.62)",
+          "oklch(60.71% 0.16655 258.62)",
+          "oklch(72.14% 0.16655 258.62)",
+          "oklch(83.57% 0.16655 258.62)",
+          "oklch(95.00% 0.16655 258.62)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "accent-hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.14730 258.58)",
+          "oklch(26.43% 0.14730 258.58)",
+          "oklch(37.86% 0.14730 258.58)",
+          "oklch(49.29% 0.14730 258.58)",
+          "oklch(60.71% 0.14730 258.58)",
+          "oklch(72.14% 0.14730 258.58)",
+          "oklch(83.57% 0.14730 258.58)",
+          "oklch(95.00% 0.14730 258.58)"
+        ]
+      },
+      "selected": {
+        "role": "primary",
+        "displayName": "selected",
+        "tonalRamp": [
+          "oklch(15.00% 0.02296 258.36)",
+          "oklch(26.43% 0.02296 258.36)",
+          "oklch(37.86% 0.02296 258.36)",
+          "oklch(49.29% 0.02296 258.36)",
+          "oklch(60.71% 0.02296 258.36)",
+          "oklch(72.14% 0.02296 258.36)",
+          "oklch(83.57% 0.02296 258.36)",
+          "oklch(95.00% 0.02296 258.36)"
+        ]
+      },
+      "selected-text": {
+        "role": "primary",
+        "displayName": "selected-text",
+        "tonalRamp": [
+          "oklch(15.00% 0.14088 258.21)",
+          "oklch(26.43% 0.14088 258.21)",
+          "oklch(37.86% 0.14088 258.21)",
+          "oklch(49.29% 0.14088 258.21)",
+          "oklch(60.71% 0.14088 258.21)",
+          "oklch(72.14% 0.14088 258.21)",
+          "oklch(83.57% 0.14088 258.21)",
+          "oklch(95.00% 0.14088 258.21)"
+        ]
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "danger",
+        "tonalRamp": [
+          "oklch(15.00% 0.16058 25.84)",
+          "oklch(26.43% 0.16058 25.84)",
+          "oklch(37.86% 0.16058 25.84)",
+          "oklch(49.29% 0.16058 25.84)",
+          "oklch(60.71% 0.16058 25.84)",
+          "oklch(72.14% 0.16058 25.84)",
+          "oklch(83.57% 0.16058 25.84)",
+          "oklch(95.00% 0.16058 25.84)"
+        ]
+      },
+      "danger-surface": {
+        "role": "semantic",
+        "displayName": "danger-surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.01632 22.08)",
+          "oklch(26.43% 0.01632 22.08)",
+          "oklch(37.86% 0.01632 22.08)",
+          "oklch(49.29% 0.01632 22.08)",
+          "oklch(60.71% 0.01632 22.08)",
+          "oklch(72.14% 0.01632 22.08)",
+          "oklch(83.57% 0.01632 22.08)",
+          "oklch(95.00% 0.01632 22.08)"
+        ]
+      },
+      "warning": {
+        "role": "semantic",
+        "displayName": "warning",
+        "tonalRamp": [
+          "oklch(15.00% 0.10613 70.22)",
+          "oklch(26.43% 0.10613 70.22)",
+          "oklch(37.86% 0.10613 70.22)",
+          "oklch(49.29% 0.10613 70.22)",
+          "oklch(60.71% 0.10613 70.22)",
+          "oklch(72.14% 0.10613 70.22)",
+          "oklch(83.57% 0.10613 70.22)",
+          "oklch(95.00% 0.10613 70.22)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "dark-surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.00811 264.42)",
+          "oklch(26.43% 0.00811 264.42)",
+          "oklch(37.86% 0.00811 264.42)",
+          "oklch(49.29% 0.00811 264.42)",
+          "oklch(60.71% 0.00811 264.42)",
+          "oklch(72.14% 0.00811 264.42)",
+          "oklch(83.57% 0.00811 264.42)",
+          "oklch(95.00% 0.00811 264.42)"
+        ]
+      },
+      "dark-surface-secondary": {
+        "role": "neutral",
+        "displayName": "dark-surface-secondary",
+        "tonalRamp": [
+          "oklch(15.00% 0.01177 264.37)",
+          "oklch(26.43% 0.01177 264.37)",
+          "oklch(37.86% 0.01177 264.37)",
+          "oklch(49.29% 0.01177 264.37)",
+          "oklch(60.71% 0.01177 264.37)",
+          "oklch(72.14% 0.01177 264.37)",
+          "oklch(83.57% 0.01177 264.37)",
+          "oklch(95.00% 0.01177 264.37)"
+        ]
+      },
+      "dark-surface-glass": {
+        "role": "neutral",
+        "displayName": "dark-surface-glass",
+        "tonalRamp": [
+          "oklch(15.00% 0.01181 264.37)",
+          "oklch(26.43% 0.01181 264.37)",
+          "oklch(37.86% 0.01181 264.37)",
+          "oklch(49.29% 0.01181 264.37)",
+          "oklch(60.71% 0.01181 264.37)",
+          "oklch(72.14% 0.01181 264.37)",
+          "oklch(83.57% 0.01181 264.37)",
+          "oklch(95.00% 0.01181 264.37)"
+        ]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "dark-text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00577 264.53)",
+          "oklch(26.43% 0.00577 264.53)",
+          "oklch(37.86% 0.00577 264.53)",
+          "oklch(49.29% 0.00577 264.53)",
+          "oklch(60.71% 0.00577 264.53)",
+          "oklch(72.14% 0.00577 264.53)",
+          "oklch(83.57% 0.00577 264.53)",
+          "oklch(95.00% 0.00577 264.53)"
+        ]
+      },
+      "dark-text-muted": {
+        "role": "neutral",
+        "displayName": "dark-text-muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.01701 262.74)",
+          "oklch(26.43% 0.01701 262.74)",
+          "oklch(37.86% 0.01701 262.74)",
+          "oklch(49.29% 0.01701 262.74)",
+          "oklch(60.71% 0.01701 262.74)",
+          "oklch(72.14% 0.01701 262.74)",
+          "oklch(83.57% 0.01701 262.74)",
+          "oklch(95.00% 0.01701 262.74)"
+        ]
+      },
+      "dark-border": {
+        "role": "neutral",
+        "displayName": "dark-border",
+        "tonalRamp": [
+          "oklch(15.00% 0.01656 262.30)",
+          "oklch(26.43% 0.01656 262.30)",
+          "oklch(37.86% 0.01656 262.30)",
+          "oklch(49.29% 0.01656 262.30)",
+          "oklch(60.71% 0.01656 262.30)",
+          "oklch(72.14% 0.01656 262.30)",
+          "oklch(83.57% 0.01656 262.30)",
+          "oklch(95.00% 0.01656 262.30)"
+        ]
+      },
+      "dark-hover": {
+        "role": "neutral",
+        "displayName": "dark-hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.01714 262.27)",
+          "oklch(26.43% 0.01714 262.27)",
+          "oklch(37.86% 0.01714 262.27)",
+          "oklch(49.29% 0.01714 262.27)",
+          "oklch(60.71% 0.01714 262.27)",
+          "oklch(72.14% 0.01714 262.27)",
+          "oklch(83.57% 0.01714 262.27)",
+          "oklch(95.00% 0.01714 262.27)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "dark-accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.09986 259.30)",
+          "oklch(26.43% 0.09986 259.30)",
+          "oklch(37.86% 0.09986 259.30)",
+          "oklch(49.29% 0.09986 259.30)",
+          "oklch(60.71% 0.09986 259.30)",
+          "oklch(72.14% 0.09986 259.30)",
+          "oklch(83.57% 0.09986 259.30)",
+          "oklch(95.00% 0.09986 259.30)"
+        ]
+      },
+      "dark-accent-hover": {
+        "role": "primary",
+        "displayName": "dark-accent-hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.06715 261.69)",
+          "oklch(26.43% 0.06715 261.69)",
+          "oklch(37.86% 0.06715 261.69)",
+          "oklch(49.29% 0.06715 261.69)",
+          "oklch(60.71% 0.06715 261.69)",
+          "oklch(72.14% 0.06715 261.69)",
+          "oklch(83.57% 0.06715 261.69)",
+          "oklch(95.00% 0.06715 261.69)"
+        ]
+      },
+      "dark-selected": {
+        "role": "primary",
+        "displayName": "dark-selected",
+        "tonalRamp": [
+          "oklch(15.00% 0.06767 258.54)",
+          "oklch(26.43% 0.06767 258.54)",
+          "oklch(37.86% 0.06767 258.54)",
+          "oklch(49.29% 0.06767 258.54)",
+          "oklch(60.71% 0.06767 258.54)",
+          "oklch(72.14% 0.06767 258.54)",
+          "oklch(83.57% 0.06767 258.54)",
+          "oklch(95.00% 0.06767 258.54)"
+        ]
+      },
+      "dark-selected-text": {
+        "role": "primary",
+        "displayName": "dark-selected-text",
+        "tonalRamp": [
+          "oklch(15.00% 0.05650 260.83)",
+          "oklch(26.43% 0.05650 260.83)",
+          "oklch(37.86% 0.05650 260.83)",
+          "oklch(49.29% 0.05650 260.83)",
+          "oklch(60.71% 0.05650 260.83)",
+          "oklch(72.14% 0.05650 260.83)",
+          "oklch(83.57% 0.05650 260.83)",
+          "oklch(95.00% 0.05650 260.83)"
+        ]
+      },
+      "dark-danger": {
+        "role": "semantic",
+        "displayName": "dark-danger",
+        "tonalRamp": [
+          "oklch(15.00% 0.09087 23.33)",
+          "oklch(26.43% 0.09087 23.33)",
+          "oklch(37.86% 0.09087 23.33)",
+          "oklch(49.29% 0.09087 23.33)",
+          "oklch(60.71% 0.09087 23.33)",
+          "oklch(72.14% 0.09087 23.33)",
+          "oklch(83.57% 0.09087 23.33)",
+          "oklch(95.00% 0.09087 23.33)"
+        ]
+      },
+      "dark-danger-surface": {
+        "role": "semantic",
+        "displayName": "dark-danger-surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.03792 22.02)",
+          "oklch(26.43% 0.03792 22.02)",
+          "oklch(37.86% 0.03792 22.02)",
+          "oklch(49.29% 0.03792 22.02)",
+          "oklch(60.71% 0.03792 22.02)",
+          "oklch(72.14% 0.03792 22.02)",
+          "oklch(83.57% 0.03792 22.02)",
+          "oklch(95.00% 0.03792 22.02)"
+        ]
+      },
+      "dark-warning": {
+        "role": "semantic",
+        "displayName": "dark-warning",
+        "tonalRamp": [
+          "oklch(15.00% 0.10258 81.06)",
+          "oklch(26.43% 0.10258 81.06)",
+          "oklch(37.86% 0.10258 81.06)",
+          "oklch(49.29% 0.10258 81.06)",
+          "oklch(60.71% 0.10258 81.06)",
+          "oklch(72.14% 0.10258 81.06)",
+          "oklch(83.57% 0.10258 81.06)",
+          "oklch(95.00% 0.10258 81.06)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "body": {
+        "displayName": "正文",
+        "purpose": "工作区和普通控件"
+      },
+      "small": {
+        "displayName": "说明",
+        "purpose": "辅助状态和计数"
+      },
+      "title": {
+        "displayName": "标题",
+        "purpose": "当前工作面标题"
+      },
+      "section": {
+        "displayName": "小节",
+        "purpose": "编辑与设置分组"
+      }
+    },
+    "shadows": [
+      {
+        "name": "segmented-checked",
+        "value": "0 1px 3px #0000001a",
+        "purpose": "components.css实际使用的选中分段阴影"
+      }
+    ],
+    "motion": [
+      {
+        "name": "duration",
+        "value": "170ms",
+        "purpose": "按钮背景和开关位移；减少动画为0ms"
+      },
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "状态过渡曲线"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-layout",
+        "value": "1150px"
+      },
+      {
+        "name": "exclusive-panels",
+        "value": "980px"
+      },
+      {
+        "name": "extra-narrow-css",
+        "value": "700px"
+      },
+      {
+        "name": "short-height",
+        "value": "700px",
+        "axis": "height"
+      }
+    ],
+    "material": {
+      "blur": "18px",
+      "reducedTransparency": "surface-secondary + blur 0px",
+      "unsupportedBackdrop": "现有高不透明度背景及边界；没有独立@supports分支"
+    },
+    "previewNotes": "色阶由源码颜色合成OKLCH，仅作面板预览，不是应用已有调色板；透明颜色色阶取RGB忽略alpha。示例只展示外观，不实现React/Radix行为。未消费的--shadow不记为实际组件阴影。"
+  },
+  "components": [
+    {
+      "name": "默认按钮",
+      "kind": "button",
+      "html": "<button class=\"ds-button\">重命名</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2,8px);min-height:34px;padding:var(--space-1,4px) var(--space-3,12px);border:1px solid var(--border,#dce0e6);border-radius:var(--radius-control,8px);background:var(--surface,#fff);color:var(--text,#242831);font:13px/1.6 \"Segoe UI\",\"Microsoft YaHei\",sans-serif;cursor:pointer;transition:background var(--duration,170ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover:not(:disabled){background:var(--hover,#e7eaf0)}.ds-button:active:not(:disabled){background:var(--selected,#e2ecfb)}.ds-button:disabled{opacity:.48;cursor:not-allowed}.ds-button:focus-visible{outline:2px solid var(--accent,#185cbd);outline-offset:3px}"
+    },
+    {
+      "name": "主保存按钮",
+      "kind": "button",
+      "html": "<button class=\"ds-button ds-primary\">保存草稿</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2,8px);min-height:34px;padding:var(--space-1,4px) var(--space-3,12px);border:1px solid var(--border,#dce0e6);border-radius:var(--radius-control,8px);background:var(--surface,#fff);color:var(--text,#242831);font:13px/1.6 \"Segoe UI\",\"Microsoft YaHei\",sans-serif;cursor:pointer;transition:background var(--duration,170ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover:not(:disabled){background:var(--hover,#e7eaf0)}.ds-button:active:not(:disabled){background:var(--selected,#e2ecfb)}.ds-button:disabled{opacity:.48;cursor:not-allowed}.ds-button:focus-visible{outline:2px solid var(--accent,#185cbd);outline-offset:3px}.ds-primary{background:var(--accent,#185cbd);color:var(--surface,#fff);border-color:transparent}.ds-primary:hover:not(:disabled){background:var(--accent-hover,#104b9e)}"
+    },
+    {
+      "name": "重命名输入",
+      "kind": "input",
+      "html": "<label class=\"ds-label\">会话名称<input class=\"ds-input\" value=\"本地草稿\"></label>",
+      "css": ".ds-label{display:grid;gap:8px;color:var(--text,#242831);font:13px/1.6 \"Segoe UI\",\"Microsoft YaHei\",sans-serif}.ds-input{font:inherit;padding:var(--space-2,8px);border:1px solid var(--border,#dce0e6);border-radius:var(--radius-small,6px);background:var(--surface,#fff);color:var(--text,#242831);caret-color:var(--accent,#185cbd)}.ds-input:focus-visible{outline:2px solid var(--accent,#185cbd);outline-offset:3px}"
+    },
+    {
+      "name": "会话导航选中项",
+      "kind": "nav",
+      "html": "<button class=\"ds-button ds-session\" aria-current=\"page\"><span>本地草稿</span><small>未保存</small></button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2,8px);min-height:34px;padding:var(--space-1,4px) var(--space-3,12px);border:1px solid var(--border,#dce0e6);border-radius:var(--radius-control,8px);background:var(--surface,#fff);color:var(--text,#242831);font:13px/1.6 \"Segoe UI\",\"Microsoft YaHei\",sans-serif;cursor:pointer;transition:background var(--duration,170ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover:not(:disabled){background:var(--hover,#e7eaf0)}.ds-button:active:not(:disabled){background:var(--selected,#e2ecfb)}.ds-button:disabled{opacity:.48;cursor:not-allowed}.ds-button:focus-visible{outline:2px solid var(--accent,#185cbd);outline-offset:3px}.ds-session{flex-direction:column;align-items:flex-start;border:0;padding:8px 12px;gap:0;background:var(--selected,#e2ecfb);color:var(--selected-text,#174f9e)}.ds-session small{font-size:12px;color:var(--text-muted,#626874)}"
+    },
+    {
+      "name": "说明标签",
+      "kind": "chip",
+      "html": "<span class=\"ds-badge\">未接入</span>",
+      "css": ".ds-badge{display:inline-flex;font:12px/1.6 \"Segoe UI\",\"Microsoft YaHei\",sans-serif;color:var(--text-muted,#626874);background:var(--surface-secondary,#f4f5f7);padding:4px 8px;border-radius:var(--radius-small,6px)}"
+    },
+    {
+      "name": "草稿容器",
+      "kind": "card",
+      "html": "<section class=\"ds-composer\"><h2 class=\"ds-heading\">本地草稿</h2><textarea class=\"ds-editor\" aria-label=\"草稿内容\" placeholder=\"记录任务要求\"></textarea></section>",
+      "css": ".ds-composer{border:1px solid var(--border,#dce0e6);border-radius:var(--radius-panel,14px);background:var(--surface,#fff);color:var(--text,#242831);font:13px/1.6 \"Segoe UI\",\"Microsoft YaHei\",sans-serif}.ds-heading{margin:0;padding:16px 16px 8px;font-size:15px;font-weight:600}.ds-editor{display:block;width:calc(100% - 32px);min-height:130px;max-height:300px;resize:vertical;margin:8px 16px;padding:8px 0;border:0;font:inherit;line-height:1.8;color:var(--text,#242831);background:var(--surface,#fff);caret-color:var(--accent,#185cbd)}.ds-editor::placeholder{color:var(--text-muted,#626874)}.ds-editor:focus-visible{outline:2px solid var(--accent,#185cbd);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "简洁轻玻璃工作台",
+    "overview": "以用户指定的 Apple 启发简洁轻玻璃与 Codex 式布局为方向：会话内容优先，导航与控制层轻透，编辑内容使用实体表面。白灰蓝与中性暗色、系统字体和紧凑控件共同服务持续操作；这是一套 Windows Electron CSS 界面，不是 Apple 官方组件或原生 Liquid Glass。\n\n本记录从已实现源码提取，刷新此前方向规范；未经过新的视觉选型。采用用户指定的 code-led 路径，没有 seed、approved comp 或 QUALITY BAR 卡片，不补造这些材料。2026-09-28 用户确认第3项界面基线，品牌定为 demo。已确认的界面布局、导航、样式及前端工程规则冻结；精确范围与文件哈希见 docs/UI-001-BASELINE.md。",
+    "keyCharacteristics": [
+      "实体内容与轻透导航分层。",
+      "会话主区、紧凑控制与按需辅助工作面。",
+      "状态文字真实，键盘焦点明确，支持亮暗及减少透明度/动画。"
+    ],
+    "rules": [
+      {
+        "name": "语义颜色",
+        "body": "新增界面复用同一语义变量；暗色覆盖语义，不在组件内重建调色板。",
+        "section": "colors"
+      },
+      {
+        "name": "系统字体",
+        "body": "使用平台已有字体与中文回退，不下载或假设安装 Apple 字体。",
+        "section": "typography"
+      },
+      {
+        "name": "内容实体",
+        "body": "玻璃限于导航与控制层；编辑区域保持实体表面，边界优先于装饰阴影。",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do 复用语义 tokens、现有图标按钮和 Radix 行为原语；新增抽象必须有实际复用需求。",
+      "Do 在最小桌面窗口检查换行、滚动、焦点、标签方向和草稿保护。",
+      "Do 用明确文字表达未接入、未保存和失败，保留用户内容。"
+    ],
+    "donts": [
+      "Don't 将占位辅助面写成已接入终端、差异或视频能力。",
+      "Don't 在消息、编辑区叠加玻璃、装饰背景或大面积阴影。",
+      "Don't 将当前候选或有限审查结论当作冻结基线、完整无障碍认证或原生 Apple 实现。"
+    ]
+  }
+}

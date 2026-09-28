@@ -24,6 +24,13 @@ async function start() {
   return page;
 }
 async function check(name, action) { await action(); checks.push({ name, passed: true }); }
+async function capture(page, name) {
+  await page.evaluate(() => {
+    window.scrollTo(0, 0);
+    document.querySelector('#main-content')?.scrollTo(0, 0);
+  });
+  await page.screenshot({ path: path.join(output, `${name}.png`), fullPage: true });
+}
 
 try {
   let page = await start();
@@ -79,12 +86,25 @@ try {
     await page.getByRole('button', { name: '保存草稿', exact: true }).click();
     await page.getByText('草稿已保存到本机。', { exact: true }).waitFor();
   });
-  await check('五个未接入模块可导航且无伪成功状态', async () => {
-    for (const name of ['电脑与浏览器', '视频与素材', '模型中转', 'MCP 服务', '插件与技能']) {
-      await page.getByRole('navigation', { name: '功能模块' }).getByRole('button', { name, exact: true }).click();
-      await page.getByRole('heading', { name: '此模块尚未接入' }).waitFor();
+  await check('辅助标签保留草稿并支持键盘切换', async () => {
+    const draft = await page.getByLabel('任务草稿', { exact: true }).inputValue();
+    await page.getByRole('button', { name: '打开辅助面板', exact: true }).click();
+    for (const name of ['终端', '差异', '视频']) {
+      await page.getByRole('tab', { name, exact: true }).click();
+      assert.match(await page.getByRole('tabpanel').innerText(), /未接入/);
+      assert.equal(await page.getByLabel('任务草稿', { exact: true }).inputValue(), draft);
     }
-    await page.getByRole('navigation', { name: '功能模块' }).getByRole('button', { name: '编程工作台' }).click();
+    await page.getByRole('tab', { name: '终端', exact: true }).focus();
+    await page.keyboard.press('ArrowRight');
+    await page.waitForFunction(() => document.activeElement?.getAttribute('role') === 'tab' && document.activeElement?.getAttribute('data-state') === 'active');
+    await page.screenshot({ path: path.join(output, 'auxiliary.png'), fullPage: true });
+    await page.getByRole('button', { name: '关闭辅助面板', exact: true }).first().click();
+  });
+  await check('侧栏收起展开保持当前会话', async () => {
+    const draft = await page.getByLabel('任务草稿', { exact: true }).inputValue();
+    await page.getByRole('button', { name: '收起会话侧栏', exact: true }).click();
+    await page.getByRole('button', { name: '展开会话侧栏', exact: true }).click();
+    assert.equal(await page.getByLabel('任务草稿', { exact: true }).inputValue(), draft);
   });
   await check('未保存离开保护（刷新触发，确认对话框使用测试替身）', async () => {
     await page.getByLabel('任务草稿', { exact: true }).fill('退出保护测试，不应悄悄丢失。');
@@ -102,6 +122,28 @@ try {
     assert.equal(await page.getByLabel('任务草稿', { exact: true }).inputValue(), '本地项目草稿；没有向模型发送请求。');
   });
   await page.screenshot({ path: path.join(output, 'desktop.png'), fullPage: true });
+  await check('设置偏好实时生效、设置切换不丢草稿', async () => {
+    const draft = await page.getByLabel('任务草稿', { exact: true }).inputValue();
+    await page.getByRole('button', { name: '设置', exact: true }).click();
+    await page.getByRole('radio', { name: '深色', exact: true }).click();
+    await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
+    await page.getByRole('switch', { name: '降低透明度', exact: true }).click();
+    await page.getByRole('switch', { name: '减少动画', exact: true }).click();
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.transparency), 'reduced');
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.motion), 'reduced');
+    assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('ui.preferences.v1'))),
+      { theme: 'dark', reduceTransparency: true, reduceMotion: true });
+    await page.screenshot({ path: path.join(output, 'settings-dark.png'), fullPage: true });
+    for (const name of ['模型中转', 'MCP 服务', '插件与技能']) {
+      await page.getByRole('tab', { name, exact: true }).click();
+      assert.match(await page.getByRole('tabpanel').innerText(), /未接入/);
+    }
+    await page.getByRole('tab', { name: '外观', exact: true }).click();
+    await page.getByRole('radio', { name: '浅色', exact: true }).click();
+    await page.screenshot({ path: path.join(output, 'settings-light.png'), fullPage: true });
+    await page.getByRole('button', { name: '编程工作台', exact: true }).click();
+    assert.equal(await page.getByLabel('任务草稿', { exact: true }).inputValue(), draft);
+  });
   await check('最小窗口无横向溢出、草稿按钮可见', async () => {
     await application.evaluate(({ BrowserWindow }) => BrowserWindow.getAllWindows()[0].setSize(960, 640));
     await page.getByRole('button', { name: '保存草稿', exact: true }).scrollIntoViewIfNeeded();
@@ -110,6 +152,22 @@ try {
     await page.keyboard.press('Tab');
     assert.equal(await page.evaluate(() => document.activeElement?.tagName !== 'BODY'), true);
     await page.screenshot({ path: path.join(output, 'minimum.png'), fullPage: true });
+    await page.getByRole('button', { name: '打开辅助面板', exact: true }).click();
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
+    await page.screenshot({ path: path.join(output, 'minimum-auxiliary.png'), fullPage: true });
+    await page.getByRole('button', { name: '关闭辅助面板', exact: true }).first().click();
+    await page.getByRole('button', { name: '设置', exact: true }).click();
+    const navigationHeight = await page.getByRole('tablist', { name: '设置分组' }).evaluate(el => el.getBoundingClientRect().height);
+    assert.ok(navigationHeight < 80, `窄屏设置导航不应占据140px高度，实际${navigationHeight}`);
+    await page.getByRole('switch', { name: '减少动画', exact: true }).click();
+    await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: 'dark' });
+    await page.getByRole('radio', { name: '跟随系统', exact: true }).click();
+    await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark' && document.documentElement.dataset.motion === 'reduced');
+    await capture(page, 'minimum-settings');
+    await page.emulateMedia({ reducedMotion: 'no-preference', colorScheme: 'light' });
+    await page.getByRole('radio', { name: '浅色', exact: true }).click();
+    await page.getByRole('switch', { name: '减少动画', exact: true }).click();
+    await page.getByRole('button', { name: '编程工作台', exact: true }).click();
   });
   await application.close();
   application = undefined;
@@ -120,6 +178,9 @@ try {
     const state = await page.evaluate(() => window.desktop.getState());
     assert.equal(state.sessions.length, 3);
     assert.equal(state.sessions.find(s => s.title === '骨架验收 · 中文草稿').draft, '未点击保存的内容，切换前必须保留。');
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), 'light');
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.transparency), 'reduced');
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.motion), 'reduced');
   });
   await check('无桥浏览器内容明确预览并禁用保存', async () => {
     const popup = application.waitForEvent('window');

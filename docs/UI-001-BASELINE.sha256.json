@@ -1,0 +1,132 @@
+{
+  "scope": "UI-001 item 3",
+  "files": [
+    {
+      "path": ".impeccable/design.json",
+      "sha256": "486c7fa63a3d8b4c36731f3ab5fbb912d663496925426278893586dc688412a8"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "2c7964967f432a239be5bf6f60f3f07ee5410b995ab6e8addf0606e472bb9d65"
+    },
+    {
+      "path": "docs/FRONTEND-RULES.md",
+      "sha256": "8d0b209d2472c2a8c0d2fa07c43bb78e112db9151840d04f6af241cfed14cd86"
+    },
+    {
+      "path": "docs/INTERFACE-PLAN.md",
+      "sha256": "68b0d04da2cc84513f0d963a262f26ae5410d865c836347f1f3a39af00133f32"
+    },
+    {
+      "path": "electron/main.ts",
+      "sha256": "79c73bbd088a202ecf967e09ef15680e27e5b109ba1e1eae7ec7e373b393edd4"
+    },
+    {
+      "path": "electron/preload.ts",
+      "sha256": "953301348a9dfae83ee46c7e9f3881e2f0dbcc984240150f616bc8ac97acad13"
+    },
+    {
+      "path": "electron/store.ts",
+      "sha256": "49894471f9f111903dbf76f6f093ddbba2df90801c9385c6915639c1d5dfc78f"
+    },
+    {
+      "path": "index.html",
+      "sha256": "fe1a6d7d1f43f444d1fe3f01b0da8a263e3311063eb21fd9563e72b84fbe8fbe"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "a3a6943a165709235c471ec40a079a3cc218f302ad279dfbaecd3305119b7ad8"
+    },
+    {
+      "path": "package.json",
+      "sha256": "fe25aa842e9e03b76725a2cb3977b1cda6dfb7239ee79f7785751dc52649369a"
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha256": "2a0d587b0bccf65838995f3ddbb6e748d6a1991304ddec8af435b50d6b515c29"
+    },
+    {
+      "path": "shared/contracts.ts",
+      "sha256": "7bd3cc817df60948f5556ac22950366413c7061b8eeef05fc1f0c542e98a2833"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "98cfe61734e2e66828c4d3e779d9a703de9f548374ff771372a415eae0db16a5"
+    },
+    {
+      "path": "src/components/layout/AuxiliaryPanel.tsx",
+      "sha256": "d98a6aab42064684237fa3534ac9df0a12d95c8a97ed11c2254ec125d3d09565"
+    },
+    {
+      "path": "src/components/ui/IconButton.tsx",
+      "sha256": "312c7ac8fddc82c04da96783bd352a319eaa38144c4494e68e2fb55939ab2d6c"
+    },
+    {
+      "path": "src/env.d.ts",
+      "sha256": "b28afe2b17072d71c30d7e183b73517b31b2fc21515f34bad7de7f2b56ccb166"
+    },
+    {
+      "path": "src/features/conversation/ConversationView.tsx",
+      "sha256": "05b5eed37d3b631f8341565209c774773ae0315d0155d6fc341fd19b1baba014"
+    },
+    {
+      "path": "src/features/conversation/useConversation.ts",
+      "sha256": "94f3d7c063ba810fbdf1e5db06c50e08acf8d01e6177b68472fbb824cb274f05"
+    },
+    {
+      "path": "src/features/settings/SettingsView.tsx",
+      "sha256": "9326abc3365b893149abf728436adbf9324d1fbee947f709ad8b77e2c3380105"
+    },
+    {
+      "path": "src/features/settings/usePreferences.ts",
+      "sha256": "afee72942f668d589c609ad4fd64b9849b23deeb1fa06a63fb619485dd958ddf"
+    },
+    {
+      "path": "src/i18n/zh-CN.ts",
+      "sha256": "2fd83eb98ed3bb56e9b7ddc99e6e4075656fb552485894527721e9637208abc9"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "3e8f684a4115c95eb370436a65a3f0d6cf7bbe949e4ea948dacc88796833b3c4"
+    },
+    {
+      "path": "src/modules.ts",
+      "sha256": "52a2d7a5713f785af71ea46a063bc6dfc370a9e19f08314a6130a265411f0c25"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "0c66556f920eb39e952d8390f4f2a77e7abdb6485391c4720d6a1d98234db783"
+    },
+    {
+      "path": "src/styles.d.ts",
+      "sha256": "db2fa45582823a06255f5123b1a596e8a4c45d10288831aeb7503702c35b187d"
+    },
+    {
+      "path": "src/styles/base.css",
+      "sha256": "bd1e59fcad8328f1a4c28bf1c57dec1a572b5a019b9e3686016951504a367f95"
+    },
+    {
+      "path": "src/styles/components.css",
+      "sha256": "2203c10a99f2875bd7b28a49a6df851661c68d843144edee6ccc8b00d1aad1ee"
+    },
+    {
+      "path": "src/styles/layout.css",
+      "sha256": "00d4cc57f323d1cfcebbdbea73f8630dca925a8db3d96df3c065621011462296"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha256": "f60ae0f2180e0e53380342950bdaabd0338f28e1960b051203c93c43a35e00d6"
+    },
+    {
+      "path": "tsconfig.electron.json",
+      "sha256": "c010f3111240c1815a78e269e650b549a851c12be5db174f0a252617058d2761"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "6fa3fb98d0a519dfbec02ea2bc4f92acb73bf9bb3e8fd2c352077a878d252dd7"
+    }
+  ],
+  "baseCommit": "c47931267dfb6f6efc43099a263538ab177371e3",
+  "confirmed": "2026-09-28",
+  "brand": "demo"
+}

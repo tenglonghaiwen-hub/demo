@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+body {
+  margin: 0;
+  font-size: var(--font-body);
+  line-height: var(--line-height);
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 34px;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease);
+}
+button:hover:not(:disabled) {
+  background: var(--hover);
+}
+button:active:not(:disabled) {
+  background: var(--selected);
+}
+button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="tabpanel"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+input,
+textarea {
+  color: var(--text);
+  background: var(--surface);
+  caret-color: var(--accent);
+}
+input {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  padding: var(--space-2);
+}
+::selection {
+  color: var(--selected-text);
+  background: var(--selected);
+}
+textarea::placeholder,
+input::placeholder {
+  color: var(--text-muted);
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: var(--font-title);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+h3 {
+  font-size: var(--font-body);
+  font-weight: 500;
+}
+svg {
+  flex-shrink: 0;
+}
+.muted,
+.hint {
+  color: var(--text-muted);
+}
+.hint {
+  font-size: var(--font-small);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

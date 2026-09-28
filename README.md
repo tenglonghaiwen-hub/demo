@@ -1,6 +1,6 @@
-# AI Desktop Assistant
+# demo
 
-独立 Windows 桌面 AI 助手的 **UI-001 候选骨架**，产品名、Electron + React + TypeScript 技术栈与界面结构尚待用户确认冻结。
+独立 Windows 桌面 AI 助手的 **UI-001 候选骨架**，品牌 demo 与第3项前端方案、界面结构已获用户确认，冻结范围见 [基线记录](docs/UI-001-BASELINE.md)。
 
 ## 运行
 
@@ -23,6 +23,7 @@ npm.cmd run dev
 - 通过系统目录选择器指定下一会话的项目；仅记录路径，不扫描、修改所选目录。
 - 本地创建、切换、重命名会话，编辑并显式保存草稿，重新启动恢复。
 - 未保存内容保护、加载/失败反馈与输入长度限制。
+- 可收起会话侧栏、按需辅助标签面板和分组设置；浅色/深色/跟随系统、降低透明度、减少动画仅改变本地外观。
 
 Codex、AI 回复、终端执行、差异读取、审批执行、电脑/浏览器控制、视频生成、模型中转、MCP、插件/技能安装 **均未接入**。无需填写密钥。没有后台付费调用、发布或账户操作。
 
@@ -30,11 +31,14 @@ Codex、AI 回复、终端执行、差异读取、审批执行、电脑/浏览�
 
 本地数据在 `.local/app/sessions.json`；Electron 缓存在同目录下。草稿为本机明文文件，请勿放入密钥。程序不会自动删除会话或损坏的数据文件。测试另用 `.local/tests` 与 `.local/qa-*`，不覆盖日常会话。
 
+外观偏好在此应用的 localStorage 键 `ui.preferences.v1`，不与草稿混存。第3项新界面的验证证据见 [界面验证](docs/UI-001-INTERFACE-VALIDATION.md)，技术与组件库分工见 [前端规则](docs/FRONTEND-RULES.md)。第3项已确认；第4项验收及外部能力不在本次确认范围。
+
 ```powershell
 npm.cmd run typecheck
 npm.cmd run build
 npm.cmd test
 npm.cmd run test:desktop
+node scripts/interface-edge-smoke.mjs
 ```
 
 先构建再跑测试；桌面验证会开启独立测试窗口并保存截图/结果到 `outputs/`。目录选择器若采用测试替身，会在结果中标明，不等于真实系统选择器人工验证。

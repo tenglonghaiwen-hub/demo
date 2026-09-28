@@ -1,11 +1,13 @@
 # 问题台账
 
-UI-001 已建立源码。主与独立检查未发现待处理的 P0/P1/P2，结论及检查范围见 REVIEW-UI-001。需求待定和未接入功能见 TASKS，不冒充 Bug。
+UI-001 已建立源码。第3项新界面的结论及范围见 REVIEW-UI-001-INTERFACE；REVIEW-UI-001为历史骨架证据。需求待定和未接入功能见 TASKS，不冒充 Bug。
 
 ## 主要问题：P0 / P1 / 有使用影响的 P2
-暂无已确认未解决项。
+本轮检查未发现尚未解决的P0/P1/P2；范围及未验证边界见独立审查记录。
 
 ## 已解决发现
+- UI-001-R07 / 窄屏设置标签栏异常140px高 / P2 / 已修复复核：fresh视觉审查F1确认layout媒体查询被后加载components的flex简写覆盖，960×640首屏设置内容被挤压。改为更具体选择器的flex:0 0 auto；最终桌面11项新增高度断言通过，原审查者确认约34px且主题/降低透明度两行完整可见，F1 resolved。证据outputs/desktop-2026-09-28T07-29-22-898Z，不更改布局方向或功能范围。
+- UI-001-R06 / 外观主题类型校验接受数组 / P2 / 已修复独立复核（第3项）：偏好读取使用String(theme)使["dark"]等数组通过，导致主题Radio无选中、["system"]不跟随系统。usePreferences改为先验证字符串再检查允许值；非法值回退默认并提示。独立故障9/9通过，outputs/review-failures-2026-09-28T07-17-59-732Z/result.json。仅呈现偏好受影响，无会话数据格式或权限变化。
 - UI-001-R05 / 隐藏启动器下主窗口未显示 / P1 / 已修复验证：通过隐藏 Start-Process 启动 scripts/start.mjs，Electron 主进程存在但主窗口句柄为0；main 在 loadURL 后明确 show/focus，再次启动同样入口得到标题“AI 桌面助手”、非零句柄461122（PID9796，验证时快照）。second-instance 同步 show。独立复核补丁和窗口，桌面回归9/9通过；修复纳入 UI-001 收尾提交，Git 当前状态见 HANDOFF。
 - UI-001-R01 / 前端 CSP 缺失 / P2 / 已修复：独立审查初稿发现 index.html 缺少资源约束。补严格 CSP，禁止网络连接、内联脚本、对象和 frame；类型/构建及真实窗口加载通过。关联 REVIEW-UI-001 R01。
 - 实现阶段缺少 CSS 引用、测试夹具路径尾分隔符、Playwright 与 Electron 重复处理 beforeunload 的现象已在集成/验证时解决。它们不代表已交付的应用回归；过程及真实结果记 CHANGES。

@@ -40,7 +40,7 @@ else {
     session.defaultSession.setPermissionCheckHandler(() => false);
     const win = new BrowserWindow({
       width: 1360, height: 900, minWidth: 960, minHeight: 640,
-      title: 'AI Desktop Assistant · 候选骨架', backgroundColor: '#f6f7f4',
+      title: 'demo', backgroundColor: '#f6f7f4',
       webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true, webSecurity: true },
     });
     win.removeMenu();
