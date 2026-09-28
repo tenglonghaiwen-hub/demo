@@ -24,6 +24,7 @@ else {
   app.on('second-instance', () => {
     const win = BrowserWindow.getAllWindows()[0];
     if (win?.isMinimized()) win.restore();
+    win?.show();
     win?.focus();
   });
   app.whenReady().then(async () => {
@@ -78,6 +79,9 @@ else {
     handle('session:rename', (id, title) => store.update(id, 'title', title));
     handle('session:save', (id, draft) => store.update(id, 'draft', draft));
     await win.loadURL(entry);
+    // 隐藏的启动终端可能传递隐藏标记；明确显示用户要操作的主窗口。
+    win.show();
+    win.focus();
   }).catch(error => {
     dialog.showErrorBox('启动失败', String(error));
     app.exit(1);

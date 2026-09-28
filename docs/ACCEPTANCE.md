@@ -9,6 +9,7 @@
 - npm.cmd run test:desktop：主 Agent 和独立审查者分别运行，均 9/9 通过、pageErrors=[]。
 - 主证据 outputs/desktop-2026-09-28T06-02-46-576Z；独立证据 outputs/desktop-2026-09-28T06-03-13-654Z。每处均含 result.json、empty.png、desktop.png、minimum.png，产物不入库。
 - 独立失败恢复检查：.local/review-failure-114c85f6-179c-4fec-a424-7c6435550166/review-result.json，3项通过。
+- 收尾启动修复：隐藏启动器下主窗口不显示，补 main 的 show/focus 后原入口复测可见；独立确认 PID9796、窗口标题“AI 桌面助手”、句柄461122。独立桌面回归再次9/9通过，outputs/desktop-2026-09-28T06-09-53-990Z/result.json。窗口数字为本次快照，不是固定配置。
 
 ## 验收矩阵
 | 编号 | 可观察结果 | 实际证据与边界 |

@@ -6,6 +6,7 @@ UI-001 已建立源码。主与独立检查未发现待处理的 P0/P1/P2，结�
 暂无已确认未解决项。
 
 ## 已解决发现
+- UI-001-R05 / 隐藏启动器下主窗口未显示 / P1 / 已修复验证：通过隐藏 Start-Process 启动 scripts/start.mjs，Electron 主进程存在但主窗口句柄为0；main 在 loadURL 后明确 show/focus，再次启动同样入口得到标题“AI 桌面助手”、非零句柄461122（PID9796，验证时快照）。second-instance 同步 show。独立复核补丁和窗口，桌面回归9/9通过；修复纳入 UI-001 收尾提交，Git 当前状态见 HANDOFF。
 - UI-001-R01 / 前端 CSP 缺失 / P2 / 已修复：独立审查初稿发现 index.html 缺少资源约束。补严格 CSP，禁止网络连接、内联脚本、对象和 frame；类型/构建及真实窗口加载通过。关联 REVIEW-UI-001 R01。
 - 实现阶段缺少 CSS 引用、测试夹具路径尾分隔符、Playwright 与 Electron 重复处理 beforeunload 的现象已在集成/验证时解决。它们不代表已交付的应用回归；过程及真实结果记 CHANGES。
 
